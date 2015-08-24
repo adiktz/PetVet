@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="dashboardPagerItems">
+        <item>PETS</item>
+        <item>VETS</item>
+        <item>FORUM</item>
+        <item>DATES</item>
+    </string-array>
+</resources>
