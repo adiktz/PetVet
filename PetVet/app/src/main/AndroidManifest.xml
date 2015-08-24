@@ -19,6 +19,7 @@
         <activity
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile"
+            android:theme="@style/AppBaseThemeProfile"
             android:parentActivityName=".DashboardActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
