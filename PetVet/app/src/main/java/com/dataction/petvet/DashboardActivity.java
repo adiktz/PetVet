@@ -3,6 +3,7 @@ package com.dataction.petvet;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.app.Activity;
+import android.content.Intent;
 import android.net.Uri;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
@@ -50,6 +51,9 @@ public class DashboardActivity extends AppCompatActivity implements DashboardFra
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+//        // Set the padding to match the Status Bar height
+//        toolbar.setPadding(0, getStatusBarHeight(), 0, 0);
 
         mPagerAdapter = new DashboardPagerAdapter(getSupportFragmentManager(), this);
         mViewPager.setAdapter(mPagerAdapter);
@@ -107,7 +111,8 @@ public class DashboardActivity extends AppCompatActivity implements DashboardFra
 
     @OnClick(R.id.profile_image)
     public void profile(View view) {
-        Toast.makeText(DashboardActivity.this, "Hmm", Toast.LENGTH_SHORT).show();
+        Intent profile = new Intent(this,ProfileActivity.class);
+        startActivity(profile);
     }
 
     @OnClick(R.id.fab)
@@ -178,5 +183,15 @@ public class DashboardActivity extends AppCompatActivity implements DashboardFra
                 }
             }
         }
+    }
+
+    // A method to find height of the status bar
+    public int getStatusBarHeight() {
+        int result = 0;
+        int resourceId = getResources().getIdentifier("status_bar_height", "dimen", "android");
+        if (resourceId > 0) {
+            result = getResources().getDimensionPixelSize(resourceId);
+        }
+        return result;
     }
 }
