@@ -68,14 +68,18 @@ public class LoginActivityFragment extends Fragment {
         bundle.putInt("bundle", 1);
 
         if (mListener != null) {
-            Toast.makeText(getContext(), "Ddddd", Toast.LENGTH_SHORT).show();
             mListener.onFragmentInteraction(bundle);
         }
     }
 
     @OnClick(R.id.btnSignup)
     public void signup(View view){
+        Bundle bundle = new Bundle();
+        bundle.putInt("bundle", 0);
 
+        if (mListener != null) {
+            mListener.onFragmentInteraction(bundle);
+        }
     }
 
     /**
