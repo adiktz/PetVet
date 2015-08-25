@@ -68,7 +68,7 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityFra
         }
 
         if(button != 1){
-            getSupportFragmentManager().beginTransaction().add(R.id.fragment,
+            getSupportFragmentManager().beginTransaction().replace(R.id.fragment,
                     SignUpFragment.newInstance()).commit();
         }
     }
