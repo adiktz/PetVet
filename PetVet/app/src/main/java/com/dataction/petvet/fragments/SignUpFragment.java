@@ -2,7 +2,7 @@ package com.dataction.petvet.fragments;
 
 
 import android.os.Bundle;
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,11 +34,9 @@ public class SignUpFragment extends Fragment {
      * @return A new instance of fragment SignUpFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static SignUpFragment newInstance(String param1, String param2) {
+    public static SignUpFragment newInstance() {
         SignUpFragment fragment = new SignUpFragment();
         Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
         fragment.setArguments(args);
         return fragment;
     }

@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.Toast;
 
 import com.dataction.petvet.fragments.LoginActivityFragment;
+import com.dataction.petvet.fragments.SignUpFragment;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -60,11 +61,15 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityFra
 
     @Override
     public void onFragmentInteraction(Bundle bundle) {
-        int button = bundle.getInt("button");
-    //    if(button == 1){
-            Toast.makeText(this,button, Toast.LENGTH_SHORT).show();
+        int button = bundle.getInt("bundle");
+        if(button == 1){
             startActivity(new Intent(this, DashboardActivity.class));
             finish();
-    //    }
+        }
+
+        if(button != 1){
+            getSupportFragmentManager().beginTransaction().add(R.id.fragment,
+                    SignUpFragment.newInstance()).commit();
+        }
     }
 }
