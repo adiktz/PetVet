@@ -33,10 +33,11 @@ public class ProfileActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(true);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+        collapsingToolbarLayout.setTitle("Gaurav Ravi");
 
 
         FragmentManager manager = getSupportFragmentManager();
