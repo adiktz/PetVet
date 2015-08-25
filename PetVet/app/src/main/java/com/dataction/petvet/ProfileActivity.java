@@ -38,8 +38,6 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         collapsingToolbarLayout.setTitle("Gaurav Ravi");
-
-
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
         transaction.replace(R.id.profileFragment, new ProfileActivityFragment()).commit();
