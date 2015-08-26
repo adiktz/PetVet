@@ -10,6 +10,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <!--<android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_login"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="enterAlways"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>-->
+
         <include
             android:id="@+id/toolbar_login"
             layout="@layout/toolbar" />
@@ -19,6 +27,8 @@
     <FrameLayout
         android:id="@+id/fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:descendantFocusability="beforeDescendants"
+        android:focusableInTouchMode="true"/>
 
 </LinearLayout>

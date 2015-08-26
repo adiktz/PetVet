@@ -2,6 +2,8 @@ package com.dataction.petvet;
 
 
 import android.content.Intent;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -29,11 +31,23 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityFra
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
+
         // Show the login form
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().add(R.id.fragment,
                     LoginActivityFragment.newInstance()).commit();
         }
+
+        getSupportFragmentManager().addOnBackStackChangedListener(new FragmentManager.OnBackStackChangedListener() {
+            @Override
+            public void onBackStackChanged() {
+                if (getSupportFragmentManager().getBackStackEntryCount() > 0) {
+                //    getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+                } else {
+                //    getSupportActionBar().setDisplayHomeAsUpEnabled(false);
+                }
+            }
+        });
     }
 
 
@@ -55,6 +69,9 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityFra
         if (id == R.id.action_settings) {
             return true;
         }
+        if(id == android.R.id.home){
+            onBackPressed();
+        }
 
         return super.onOptionsItemSelected(item);
     }
@@ -68,8 +85,16 @@ public class LoginActivity extends AppCompatActivity implements LoginActivityFra
         }
 
         if(button != 1){
-            getSupportFragmentManager().beginTransaction().replace(R.id.fragment,
-                    SignUpFragment.newInstance()).commit();
+
+//            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+            // Show the signup form, but keep the transaction on the back stack
+            // so that if the user clicks the back button, they are brought back
+            // to the login form.
+            FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+            transaction.replace(R.id.fragment,
+                    SignUpFragment.newInstance());
+            transaction.addToBackStack(null);
+            transaction.commit();
         }
     }
 }

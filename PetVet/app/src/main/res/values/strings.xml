@@ -14,5 +14,8 @@
     <string name="passord_hint">password</string>
     <string name="email_id">Email</string>
     <string name="password">Password</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
+    <string name="mobile_number">Phone</string>
 
 </resources>
