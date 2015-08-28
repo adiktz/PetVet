@@ -55,9 +55,9 @@ public class ProfileActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         collapsingToolbarLayout.setTitle("Gaurav Ravi");
-        FragmentManager manager = getSupportFragmentManager();
+        /*FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
-        transaction.replace(R.id.profileFragment, new ProfileActivityFragment(),PROFILE_FRAG).commit();
+        transaction.replace(R.id.profileFragment, new ProfileActivityFragment(),PROFILE_FRAG).commit();*/
     }
 
 
@@ -114,8 +114,8 @@ public class ProfileActivity extends AppCompatActivity {
     @OnClick(R.id.edit_profile)
     public void editProfile(View view){
 
-        ProfileActivityFragment fragment = (ProfileActivityFragment) getSupportFragmentManager().findFragmentByTag(PROFILE_FRAG);
+        /*ProfileActivityFragment fragment = (ProfileActivityFragment) getSupportFragmentManager().findFragmentByTag(PROFILE_FRAG);
         fragment.setUpProfileEdit();
-        collapseToolbar();
+        collapseToolbar();*/
     }
 }
