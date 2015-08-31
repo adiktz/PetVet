@@ -70,5 +70,11 @@
         <item name="android:divider">@null</item>
     </style>
 
+    <style name="TextSytle">
+        <item name="android:textColor">@color/primary_text</item>
+        <item name="android:textSize">18dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
 

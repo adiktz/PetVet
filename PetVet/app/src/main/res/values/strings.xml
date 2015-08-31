@@ -21,5 +21,8 @@
     <string name="save">save</string>
     <string name="species_lbl_text">Species</string>
     <string name="breed_lbl_text">Breed</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="gender">Sex</string>
 
 </resources>

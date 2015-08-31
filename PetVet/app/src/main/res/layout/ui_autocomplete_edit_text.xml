@@ -14,7 +14,7 @@
             android:layout_marginTop="65dp"
             android:ems="10"
             android:hint="Vet"
-            android:textColor="@color/secondary_text" />
+            android:singleLine="true" />
 
     </android.support.design.widget.TextInputLayout>
 </merge>

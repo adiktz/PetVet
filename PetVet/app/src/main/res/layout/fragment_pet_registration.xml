@@ -11,5 +11,8 @@
 
     <include layout="@layout/ui_species_breed_widget"/>
     <include layout="@layout/ui_autocomplete_edit_text"/>
+    <include layout="@layout/ui_gender_selector"/>
+    
+
 
 </LinearLayout>
