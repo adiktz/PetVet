@@ -2,15 +2,30 @@ package com.dataction.petvet;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
-public class PetRegistration extends AppCompatActivity {
+import butterknife.Bind;
+import butterknife.ButterKnife;
+
+public class PetRegistrationActivity extends AppCompatActivity {
+
+    @Bind(R.id.toolbar_pet_registration)
+    Toolbar toolbar;
+    @Bind(R.id.title_pet_registration)
+    TextView title;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pet_registration);
+        ButterKnife.bind(this);
+
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        title.setText("Tell Us about your pet");
     }
 
 

@@ -21,6 +21,7 @@
             app:border_color="#FF000000" />
 
         <TextView
+            android:id="@+id/title_pet_registration"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:paddingLeft="20sp"

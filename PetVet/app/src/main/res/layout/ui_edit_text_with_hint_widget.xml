@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/txtEmailSignup"
+            style="@style/EditTextStyle"
+            android:editable="false"
+            android:hint="@string/email_id"
+            android:inputType="text"
+            android:singleLine="true" />
+    </android.support.design.widget.TextInputLayout>
+
+</merge>

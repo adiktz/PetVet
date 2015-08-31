@@ -117,7 +117,8 @@ public class DashboardActivity extends AppCompatActivity implements DashboardFra
 
     @OnClick(R.id.fab)
     public void fabClick(View view) {
-        Toast.makeText(DashboardActivity.this, "Ymm", Toast.LENGTH_SHORT).show();
+        Intent petRegistration = new Intent(this, PetRegistrationActivity.class);
+        startActivity(petRegistration);
     }
 
     private static class TabLayoutOnPageChangeListener implements ViewPager.OnPageChangeListener {

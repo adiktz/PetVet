@@ -17,5 +17,9 @@
     <string name="firstName">First Name</string>
     <string name="lastName">Last Name</string>
     <string name="mobile_number">Phone</string>
+    <string name="title_activity_pet_registration">PetRegistrationActivity</string>
+    <string name="save">save</string>
+    <string name="species_lbl_text">Species</string>
+    <string name="breed_lbl_text">Breed</string>
 
 </resources>
