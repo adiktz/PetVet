@@ -12,7 +12,27 @@
     <include layout="@layout/ui_species_breed_widget"/>
     <include layout="@layout/ui_autocomplete_edit_text"/>
     <include layout="@layout/ui_gender_selector"/>
-    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/card_margin"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextSytle"
+            android:layout_weight="1"
+            android:text="@string/date_of_birth"/>
+        <Button
+            android:id="@+id/txtDob"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            style="@style/TextSytle"
+            android:layout_weight="2"
+            android:text="dd/mm/yyyy"/>
+    </LinearLayout>
+
+
 
 
 </LinearLayout>

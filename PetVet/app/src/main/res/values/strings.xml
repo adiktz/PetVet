@@ -24,5 +24,6 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="gender">Sex</string>
+    <string name="date_of_birth">DOB</string>
 
 </resources>
