@@ -18,4 +18,7 @@ public class Pets {
     private String specie;
     private Date dateOfBirth;
     private Bitmap photo;
+
+    private static final Pets pets = new Pets();
+    public static Pets getInstance() {return pets;}
 }
